@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
-       
+        $(document).ready(function(){
+            $('#form1').submit(function(){
+                var first_name = $('#first_name').val();
+                var last_name = $('#last_name').val();
+                var email = $('#email_address').val();
+                var contact = $('#contact_no').val();
+
+                $('tbody').append('<tr><td>'+ first_name +'</td><td>'+ last_name+ '</td><td>' +email+'</td><td>' +contact+'</td></tr>');
+                $('input[type=text]').val('');
+                return false;
+            })
+
+        });
     </script>
 
 </head>
